@@ -57,7 +57,7 @@ const validateInputs = () => {
     if(passwordValue === '') {
         setError(password, 'Password is required');
     } else if (passwordValue.length < 6 ) {
-        setError(password, 'Password must be at least 6 character but no longer than 10.')
+        setError(password, 'Password must be at least 6 character')
     } else {
         setSuccess(password);
     }
@@ -89,13 +89,15 @@ agreeButton.addEventListener('click', event => {
     var checkbox = document.getElementById('invalidCheck');
     if( checkbox.checked = true){
         document.querySelector('.invalid-feedback').style.visibility='hidden';
+       var button= document.getElementById('button-disable');
+       button.style.removeProperty('pointer-events');
+       button.style.opacity='1';
     }
-    
-     else if(checkbox.checked==false){
+    else if(checkbox.checked==false){
         document.querySelector('.invalid-feedback').style.visibility='visible';
     }
+     
 });
-
 
 
 

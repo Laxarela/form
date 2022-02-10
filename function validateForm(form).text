@@ -30,3 +30,15 @@ window.onload = codeAddress;
 document.querySelector("#invalidCheck").addEventListener("click", function(event){
     event.preventDefault();
 }, false);
+
+var form = document.getElementById('form').elements;
+var usernameValue = username.value;
+var emailValue = email.value;
+var passwordValue = password.value;
+var password2Value = password2.value;
+
+for(var i=0;i<form.length;i++){
+    if(form.[i].value !=''){
+        
+    }
+}
