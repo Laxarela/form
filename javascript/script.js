@@ -78,30 +78,11 @@ $(function () {
         $("#myModal").modal("show");
         return false;
     });
-    var checkbox = document.getElementById('invalidCheck');
-    if(checkbox.checked===true){
-    document.querySelector('.invalid-feedback').style.visibility='hidden'
-    }
-
-
+  
 });
 
 
 
-function validateForm(form)
-{
-    console.log("checkbox checked is ", form.agree.checked);
-    if(!form.agree.checked)
-    {
-        document.getElementById('agree_chk_error').style.visibility='visible';
-        return false;
-    }
-    else
-    {
-        document.getElementById('agree_chk_error').style.visibility='hidden';
-        return true;
-    }
-};
 
 var agreeButton = document.getElementById( 'accept-conditions');
 agreeButton.addEventListener('click', event => {
@@ -111,4 +92,22 @@ agreeButton.addEventListener('click', event => {
     document.querySelector('.invalid-feedback').style.visibility='hidden'
 })
 
+
+function checkBox() {
+    var inputs = document.querySelectorAll('form-check-input');
+    var checkbox = document.getElementById('invalidCheck');
+    if(checkbox.checked===true){
+
+        inputs[i].checked = true;
+    }
+}
+window.onload = function() {
+    window.addEventListener('load', checkBox, false);
+}
+
+
 document.getElementById('form').reset();
+
+function myFunction() {
+    document.getElementById("form").submit();
+  }
