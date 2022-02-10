@@ -12,3 +12,21 @@ function validateForm(form)
         return true;
     }
 };
+
+
+function checkBox() {
+    var input = document.querySelectorAll('form-check-input');
+    var checkbox = document.getElementById('invalidCheck');
+    if(){
+        document.querySelector('.invalid-feedback').style.visibility='hidden'
+        
+    }
+}
+function codeAddress() {
+    document.querySelector('.invalid-feedback').style.visibility='hidden';
+}
+window.onload = codeAddress;
+
+document.querySelector("#invalidCheck").addEventListener("click", function(event){
+    event.preventDefault();
+}, false);

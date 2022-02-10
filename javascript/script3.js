@@ -4,11 +4,12 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
-//prevent  submiting
- form.addEventListener('submit', e => {
-        e.preventDefault();
-        validateInputs();
-    });
+//stop submiting
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs();
+});
 //error function
 const setError = (element, message) => {
     const inputControl = element.parentElement;
@@ -41,8 +42,7 @@ const validateInputs = () => {
 
     if(usernameValue === '') {
         setError(username, 'Username is required');
-    } 
-    else {
+    } else {
         setSuccess(username);
     }
 
@@ -57,7 +57,7 @@ const validateInputs = () => {
     if(passwordValue === '') {
         setError(password, 'Password is required');
     } else if (passwordValue.length < 6 ) {
-        setError(password, 'Password must be at least 6 character but no longer than 10.')
+        setError(password, 'Password must be at least 8 character.')
     } else {
         setSuccess(password);
     }
@@ -82,7 +82,6 @@ $(function () {
 });
 
 
-
 //agree button checked
 var agreeButton = document.getElementById( 'accept-conditions');
 agreeButton.addEventListener('click', event => {
@@ -94,8 +93,14 @@ agreeButton.addEventListener('click', event => {
      else if(checkbox.checked==false){
         document.querySelector('.invalid-feedback').style.visibility='visible';
     }
-});
+})
 
 
 
+
+
+
+
+
+document.getElementById('form').reset();
 

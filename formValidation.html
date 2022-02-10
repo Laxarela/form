@@ -9,44 +9,45 @@
         <link href="./style/style.css" rel="stylesheet" type="text/css">
         <title> Validation form</title>
     </head>
-    <body>
+    <body   >
         <div class="container">
             <form id="form" action="/" >
                 <div class="header"> 
+
                     <h1>Registration</h1>
                 </div>
                 <div class="input-control">
                     <label for="username">Username</label> 
-                    <input id="username" name="username" type="text" autocomplete="off">
+                    <input id="username" name="username" type="text" autocomplete="off" >
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
                     <label for="email">Email</label>
-                    <input id="email" name="email" type="text"  autocomplete="off">
+                    <input id="email" name="email" type="text"  autocomplete="off" >
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
                     <label for="password">Password</label>
-                    <input id="password"name="password" type="password" autocomplete="off">
+                    <input id="password"name="password" type="password" autocomplete="off" >
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
                     <label for="password2">Password again</label>
-                    <input id="password2"name="password2" type="password">
+                    <input id="password2"name="password2" type="password" >
                     <div class="error"></div>
                 </div>
                 <div class="terms">
                  <div class="form-check">
-                   <input class="form-check-input"  value =" "type="checkbox" value="" id="invalidCheck" unchecked>
-                   <label class="form-check-label" for="invalidCheck">
+                   <input class="form-check-input"  value =" "type="checkbox" value="" id="invalidCheck"  autocomplete="off">
+                   <label class="form-check-label"  id="id-checkbox" for="invalidCheck" >
                     <a class="Update" href=""> <h6 >Terms and conditions</h6></a>
                    </label>
-                   <div class="invalid-feedback" style="color: red;">
+                   <div class="invalid-feedback" id="hide" style="color: red;">
                      You must agree before submitting.
                    </div>
                  </div>
                  </div>
-                <button  onclick="myFunction()"type="submit">Sign Up</button>
+                <button type="submit" id="button-disable"  >Sign Up</button>
             </form>
                              <!-- Modal content-->
                    <!-- Modal -->
@@ -55,7 +56,9 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Privacy policy</h4>
+          
+          <h4 class="modal-title"><i class=" icon fas fa-user-shield"></i> Privacy policy</h4>
+          
         </div>
         <div class="modal-body">
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime, ut quia, tempore asperiores
@@ -72,8 +75,8 @@
         </div>
       </div>
         </div>
-    
-        
+    </div>
+        </div>     
    <!--Javascript-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

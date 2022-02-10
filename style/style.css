@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(230, 188, 252);
+    background-color: rgba(230, 188, 252,0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +19,9 @@ body{
 	box-shadow:  2px 2px 5px rgba(0, 0, 0, 0.9);
 	overflow: hidden;
 	width: 400px;
+    background: linear-gradient(to right bottom ,rgba(255,255,255,0.7),
+    rgba(255,255,255,0.3));
+    border-radius: 3rem;
    
 
 }
@@ -31,6 +34,8 @@ body{
     border-radius: 4px;
     text-align: center;
   margin-left: 3rem;
+  background: linear-gradient(to right bottom ,rgba(255,255,255,0.2),
+  rgba(255,255,255,0.2));
 
 }
 #form h1{
@@ -57,6 +62,18 @@ body{
     text-decoration: none;
 
    }
+   .modal-title {
+       text-align: center;
+   }
+   .icon {
+   text-align: center;
+   }
+   #accept-conditions{
+       position: relative;
+       text-align: center;
+     background-color: rgb(82, 82, 243);
+     color: #fff;
+   }
 #form button{
     padding: 10px;
     margin-top: 10px;
@@ -70,11 +87,11 @@ body{
     display: flex;
     flex-direction: column;
     border: 1px black;
-   
+    
 }
 .input-control input{
     border: 2px solid rgb(236, 156, 205);
-    border-radius: 4px;
+    border-radius: 10px;
     display: block;
     width: 100%;
     font-size: 12px;
@@ -93,5 +110,5 @@ body{
 .input-control.error input{
     color: red;
     font-size: 9px;
-    height: 13px;
-}
+    height: 20px;
+    font-size: 15px;
