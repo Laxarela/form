@@ -34,6 +34,8 @@ const isValidEmail = email => {
 }
 //input validations
 const validateInputs = () => {
+    
+    var areAllFieldsOk = true;
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
@@ -41,6 +43,7 @@ const validateInputs = () => {
 
     if(usernameValue === '') {
         setError(username, 'Username is required');
+        areAllFieldsOk = false;
     } 
     else {
         setSuccess(username);
@@ -48,28 +51,40 @@ const validateInputs = () => {
 
     if(emailValue === '') {
         setError(email, 'Email is required');
+        areAllFieldsOk = false;
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Provide a valid email address');
+        areAllFieldsOk = false;
     } else {
         setSuccess(email);
     }
 
     if(passwordValue === '') {
         setError(password, 'Password is required');
+        areAllFieldsOk = false;
     } else if (passwordValue.length < 6 ) {
         setError(password, 'Password must be at least 6 character')
+        areAllFieldsOk = false
     } else {
         setSuccess(password);
     }
 
     if(password2Value === '') {
         setError(password2, 'Please confirm your password');
+        areAllFieldsOk = false;
     } else if (password2Value !== passwordValue) {
         setError(password2, "Passwords doesn't match");
+        areAllFieldsOk = false;
     } else {
         setSuccess(password2);
     }
 
+
+    if(areAllFieldsOk === false){
+        document.getElementById('hide').style.visibility = 'hidden';
+    }else{
+        document.getElementById('hide').style.visibility = 'visible';
+    }
 };
 
 //Privacy policy
